@@ -20,7 +20,10 @@
     return "";
   };
 
-  form.addEventListener("input", (e) => e.target.removeAttribute("aria-invalid"));
+  form.addEventListener("input", (e) => {
+    e.target.removeAttribute("aria-invalid");
+    status.textContent = "";
+  });
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
