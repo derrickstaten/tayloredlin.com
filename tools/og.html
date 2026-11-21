@@ -1,20 +1,28 @@
 <!doctype html>
-<!-- Source for images/og.png (the link preview). Re-render with tools/render-og.sh. -->
+<!-- Source for images/og.png (the link preview, 1200x630). Re-render with tools/render-og.sh.
+     When Taylor's photo exists, swap the monogram span for <img src="../images/taylor.jpg" alt=""> and re-render. -->
 <html><head><meta charset="utf-8">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:wght@500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="../styles.css">
 <style>
-  html,body{margin:0;width:1200px;height:630px;overflow:hidden}
-  .card{position:relative;width:1200px;height:630px;color:var(--on-dark);background:radial-gradient(ellipse 60% 80% at 80% 0%,rgba(255,231,190,.14),transparent 70%),var(--ink);padding:84px 96px 0;box-sizing:border-box}
-  .card .eyebrow{font-size:18px;margin-bottom:26px}
-  .card h1{font:400 88px/1.04 var(--serif)}
-  .card h1 em{display:block;color:#CFA566}
-  .card p.sub{font:400 30px/1.4 var(--sans);color:var(--on-dark-muted);margin:30px 0 0}
-  .card .keys{position:absolute;left:0;right:0;bottom:0;height:72px;background-size:183px 72px}
+  html,body{margin:0;width:1200px;height:630px;overflow:hidden;background:var(--ink)}
+  .card{position:relative;width:1200px;height:630px;box-sizing:border-box;color:var(--on-dark);
+    background:radial-gradient(ellipse 55% 75% at 82% 0%,rgba(255,231,190,.14),transparent 70%),var(--ink);
+    display:grid;grid-template-columns:1fr 300px;gap:48px;align-items:center;padding:0 84px 70px 84px}
+  .card .eyebrow{font-size:16px;letter-spacing:.18em;margin-bottom:24px}
+  .card h1{font-size:78px;line-height:1.03}
+  .card h1 em{display:block;color:#CFA566;margin-top:6px}
+  .card .sub{font:400 27px/1.4 var(--sans);color:var(--on-dark-muted);margin:28px 0 0}
+  .card .arch{max-width:none;width:300px;justify-self:end;outline-offset:9px}
+  .card .monogram{font-size:118px}
+  .card .keys{position:absolute;left:0;right:0;bottom:0;height:54px;background-size:137.5px 54px}
 </style></head>
 <body><div class="card">
-  <p class="eyebrow">tayloredlin.com</p>
-  <h1>Voice &amp; Piano Lessons <em>with Taylor Edlin</em></h1>
-  <p class="sub">Learn from a performer. Find your own sound.</p>
+  <div>
+    <p class="eyebrow">From the stage to the studio</p>
+    <h1>Voice &amp; Piano Lessons <em>with Taylor Edlin</em></h1>
+    <p class="sub">Learn from a performer. Find your own sound.</p>
+  </div>
+  <figure class="arch"><span class="monogram">T<i>E</i></span></figure>
   <div class="keys"></div>
 </div></body></html>
