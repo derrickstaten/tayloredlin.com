@@ -11,22 +11,22 @@
   --curtain-dark: #64161F;
   --brass: #B38A4C;
   --on-dark: #F3ECDF;
-  --on-dark-muted: #B9AE9D;
-  --serif: "Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
-  --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --on-dark-muted: #D3C9B8;
+  --serif: "DM Serif Display", "Didot", Georgia, serif;
+  --sans: "Jost", "Futura", system-ui, -apple-system, "Segoe UI", sans-serif;
   color-scheme: light;
 }
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 72px; }
-body { margin: 0; background: var(--ivory); color: var(--text); font: 400 1.0625rem/1.7 var(--sans); -webkit-font-smoothing: antialiased; }
+body { margin: 0; background: var(--ivory); color: var(--text); font: 400 1.125rem/1.65 var(--sans); -webkit-font-smoothing: antialiased; }
 img { max-width: 100%; display: block; }
 a { color: inherit; }
 [hidden] { display: none !important; }
 
 .wrap { width: 100%; max-width: 1120px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
 
-h1, h2, h3 { font-family: var(--serif); font-weight: 500; line-height: 1.1; text-wrap: balance; margin: 0; letter-spacing: -0.01em; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.1; text-wrap: balance; margin: 0; letter-spacing: -0.01em; }
 em { font-style: italic; }
 .label, .eyebrow { font: 600 .75rem/1.4 var(--sans); letter-spacing: .16em; text-transform: uppercase; margin: 0 0 18px; }
 .label { color: var(--curtain); }
@@ -35,7 +35,7 @@ em { font-style: italic; }
 /* ---------- Header ---------- */
 .site-header { position: sticky; top: 0; z-index: 10; background: rgba(23, 19, 15, .92); backdrop-filter: blur(8px); color: var(--on-dark); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 64px; }
-.wordmark { font: 500 1.35rem/1 var(--serif); text-decoration: none; letter-spacing: .01em; margin: 0; }
+.wordmark { font: 400 1.4rem/1 var(--serif); text-decoration: none; letter-spacing: .01em; margin: 0; }
 nav { display: flex; align-items: center; gap: 28px; font-size: .9rem; }
 nav a { text-decoration: none; color: var(--on-dark-muted); transition: color .15s; }
 nav a:hover { color: var(--on-dark); }
@@ -55,9 +55,9 @@ nav .nav-cta:hover { background: rgba(179, 138, 76, .15); }
   radial-gradient(ellipse 60% 70% at 78% 0%, rgba(255, 231, 190, .13), transparent 70%),
   var(--ink); padding-top: 72px; }
 .hero-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 64px; align-items: center; }
-.hero h1 { font-size: clamp(2.6rem, 6vw, 4.6rem); font-weight: 500; }
-.hero h1 em { display: block; color: var(--brass); font-weight: 400; margin-top: .12em; }
-.lede { font: 400 clamp(1.15rem, 2vw, 1.35rem)/1.55 var(--serif); color: var(--on-dark-muted); margin: 28px 0 36px; max-width: 30ch; }
+.hero h1 { font-size: clamp(2.6rem, 6vw, 4.6rem); font-weight: 400; }
+.hero h1 em { display: block; color: #CFA566; margin-top: .08em; }
+.lede { font: 400 clamp(1.15rem, 2vw, 1.3rem)/1.55 var(--sans); color: var(--on-dark-muted); margin: 28px 0 36px; max-width: 34ch; }
 .hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 28px; }
 
 /* Proscenium-arch frame for Taylor's portrait. */
@@ -67,9 +67,9 @@ nav .nav-cta:hover { background: rgba(179, 138, 76, .15); }
 .monogram { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font: 400 clamp(5rem, 11vw, 8rem)/1 var(--serif); color: rgba(243, 236, 223, .9); letter-spacing: -.04em; }
 .monogram i { color: var(--brass); margin-left: -.08em; }
 
-.billing { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 0; margin: 72px auto 0; padding-top: 22px; padding-bottom: 26px; border-top: 1px solid rgba(179, 138, 76, .3); font: italic 400 1.05rem/1.4 var(--serif); color: var(--on-dark-muted); }
+.billing { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 0; margin: 72px auto 0; padding-top: 22px; padding-bottom: 26px; border-top: 1px solid rgba(179, 138, 76, .3); font: 500 .8rem/1.4 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--on-dark); }
 .billing li { padding: 0 18px; }
-.billing li + li::before { content: "\2022"; color: var(--brass); margin: 0 18px 0 -18px; }
+.billing li + li::before { content: "\2022"; color: #CFA566; margin: 0 18px 0 -18px; }
 
 /* A strip of piano keys: the hero's last row, and the top of the booking section. */
 .keys { height: 44px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='112' height='44'%3E%3Crect width='112' height='44' fill='%23F5EFE3'/%3E%3Cpath d='M16 0V44M32 0V44M48 0V44M64 0V44M80 0V44M96 0V44M111.5 0V44' stroke='%23CDBFA8'/%3E%3Cg fill='%2317130F'%3E%3Crect x='11' y='-3' width='10' height='29' rx='2'/%3E%3Crect x='27' y='-3' width='10' height='29' rx='2'/%3E%3Crect x='59' y='-3' width='10' height='29' rx='2'/%3E%3Crect x='75' y='-3' width='10' height='29' rx='2'/%3E%3Crect x='91' y='-3' width='10' height='29' rx='2'/%3E%3C/g%3E%3C/svg%3E") repeat-x left top / 112px 44px; }
@@ -94,15 +94,15 @@ nav .nav-cta:hover { background: rgba(179, 138, 76, .15); }
 .playbill dl { margin: 0; }
 .playbill dl > div { padding: 16px 0; border-top: 1px solid var(--rule); text-align: center; }
 .playbill dl > div:first-child { border-top: 0; }
-.playbill dt { font: 500 1.2rem/1.3 var(--serif); color: var(--ink); }
+.playbill dt { font: 400 1.25rem/1.3 var(--serif); color: var(--ink); }
 .playbill dd { margin: 4px 0 0; color: var(--muted); font-size: .95rem; line-height: 1.5; }
-.playbill-note { margin: 18px 0 0; padding-top: 18px; border-top: 1px solid var(--brass); text-align: center; font: italic 400 1.02rem/1.5 var(--serif); color: var(--text); }
+.playbill-note { margin: 18px 0 0; padding-top: 18px; border-top: 1px solid var(--brass); text-align: center; font: 400 1rem/1.55 var(--sans); color: var(--text); }
 
 .pillars { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 72px; margin-top: 64px; }
 .pillars article { padding: 32px 0 36px; border-top: 1px solid var(--rule); }
 .pillars h3 { font-size: 1.75rem; margin-bottom: 14px; }
 .pillars p { margin: 0; max-width: 52ch; }
-.marking { font: italic 600 1rem/1 var(--serif) !important; color: var(--brass); margin: 0 0 14px !important; letter-spacing: .02em; }
+.marking { font: italic 400 1.1rem/1 var(--serif) !important; color: var(--brass); margin: 0 0 14px !important; letter-spacing: .02em; }
 
 .students-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
 .who { list-style: none; margin: 0; padding: 0; counter-reset: who; }
@@ -112,7 +112,7 @@ nav .nav-cta:hover { background: rgba(179, 138, 76, .15); }
 
 .why { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 0 56px; margin: 48px 0 0; }
 .why > div { padding: 24px 0; border-top: 1px solid var(--rule); }
-.why dt { font: 500 1.3rem/1.3 var(--serif); color: var(--ink); margin-bottom: 6px; }
+.why dt { font: 400 1.35rem/1.3 var(--serif); color: var(--ink); margin-bottom: 6px; }
 .why dd { margin: 0; color: var(--muted); }
 
 /* ---------- Booking ---------- */
@@ -165,7 +165,7 @@ input[aria-invalid="true"] { border-color: var(--curtain); }
   nav a:not(.nav-cta) { display: none; }
   .hero { padding-top: 48px; }
   .arch { max-width: 230px; }
-  .billing { margin-top: 56px; font-size: .98rem; }
+  .billing { margin-top: 56px; font-size: .72rem; }
   .pillars, .row.two { grid-template-columns: 1fr; }
   .playbill { padding: 32px 22px 26px; }
   .book-form, .thanks { padding: 28px 20px; }
